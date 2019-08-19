@@ -1,0 +1,64 @@
+$header-font-size : 28px;
+$header-padding   : 10px;
+$header-height    : 70px;
+$header-background: rgb(45, 45, 46);
+$header-border    : rgb(145, 145, 146);
+
+.wrapper {
+    display    : flex;
+    flex-flow  : row wrap;
+    font-family: 'Lexend Deca', sans-serif;
+
+    * {
+        flex: 1 100%;
+    }
+
+    header {
+        height       : $header-height;
+        line-height  : $header-height;
+        font-size    : $header-font-size;
+        background   : $header-background;
+        border-bottom: 1px solid $header-border;
+
+        #title {
+            color  : white;
+            cursor : default;
+            display: inline-block;
+            padding: 0 $header-padding 0 $header-padding;
+
+            &:hover {
+                background: rgb(35, 35, 35);
+                cursor    : pointer;
+            }
+
+            i {
+                color: orange;
+            }
+        }
+    }
+
+    @media all and (max-width: 800px) {
+        menu {
+            order     : 1;
+            flex      : 1 auto;
+            background: yellow;
+        }
+
+        content {
+            order     : 2;
+            background: blue;
+        }
+    }
+    
+    @media all and (min-width: 800px) {
+        menu {
+            flex      : 1;
+            background: blue;
+        }
+
+        content {
+            flex      : 4 0px;
+            background: red;
+        }
+    }
+}
