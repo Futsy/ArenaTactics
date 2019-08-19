@@ -1,8 +1,9 @@
-$header-font-size : 28px;
-$header-padding   : 10px;
-$header-height    : 70px;
-$header-background: rgb(45, 45, 46);
-$header-border    : rgb(145, 145, 146);
+$header-padding        : 10px;
+$header-height         : 70px;
+$header-font-size      : 28px;
+$header-background     : rgb(45, 45, 46);
+$header-border         : rgb(145, 145, 146);
+$title-hover-background: rgb(35, 35, 35);
 
 .wrapper {
     display    : flex;
@@ -27,7 +28,7 @@ $header-border    : rgb(145, 145, 146);
             padding: 0 $header-padding 0 $header-padding;
 
             &:hover {
-                background: rgb(35, 35, 35);
+                background: $title-hover-background;
                 cursor    : pointer;
             }
 
@@ -49,7 +50,7 @@ $header-border    : rgb(145, 145, 146);
             background: blue;
         }
     }
-    
+
     @media all and (min-width: 800px) {
         menu {
             flex      : 1;
