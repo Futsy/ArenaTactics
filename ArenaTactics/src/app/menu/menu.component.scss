@@ -1,0 +1,49 @@
+$menu-background           : rgb(72, 72, 73);
+$menu-height               : calc(100vh - 71px);
+$menu-item-background      : rgb(62, 62, 63);
+$menu-item-background-hover: rgb(57, 57, 58);
+$menu-item-color           : #888;
+$menu-item-padding         : 9px;
+$menu-item-margin-top      : 5px;
+$min-content-height        : 100px;
+
+@media all and (max-width: 800px) {
+    :host {
+        order: 1;
+        flex : 1 auto;
+    }
+}
+
+@media all and (min-width: 800px) {
+    :host {
+        flex      : 1;
+        height    : $menu-height;
+        overflow  : auto;
+        min-height: $min-content-height;
+    }
+}
+
+:host {
+    padding-inline-start: 1px;
+    background          : $menu-background;
+    margin-block-start  : 0;
+    margin-block-end    : 0;
+
+    .menu-item {
+        padding   : $menu-item-padding;
+        color     : $menu-item-color;
+        background: $menu-item-background;
+        margin-top: $menu-item-margin-top;
+        transition: 0.3s;
+        cursor    : pointer;
+
+        &:hover {
+            color     : white;
+            background: $menu-item-background-hover;
+        }
+
+        i {
+            width: 20px;
+        }
+    }
+}
