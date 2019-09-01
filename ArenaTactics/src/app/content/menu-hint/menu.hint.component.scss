@@ -1,0 +1,9 @@
+$text-margin: 20px;
+$text-color : rgb(130, 130, 137);
+
+div {
+    margin-top   : $text-margin;
+    margin-bottom: $text-margin;
+    text-align   : center;
+    color        : $text-color;
+}
