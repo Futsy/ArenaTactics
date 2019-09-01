@@ -2,7 +2,6 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { PersistenceService } from '../core/persistence.server.service';
 import { Subscription } from 'rxjs';
 import { Team } from '../model/team';
-import { CharacterClass } from '../model/character.class';
 
 @Component({
     selector: 'app-menu',
