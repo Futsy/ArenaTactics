@@ -8,6 +8,8 @@ import { ContentComponent } from './content/content.component';
 import { HeaderComponent } from './header/header.component';
 import { MenuHintComponent } from './content/menu-hint/menu.hint.component';
 import { PersistenceService } from './core/persistence.server.service';
+import { StateService } from './core/state.server.service';
+import { CreationComponent } from './creation/creation.component';
 
 @NgModule({
   declarations: [
@@ -15,13 +17,17 @@ import { PersistenceService } from './core/persistence.server.service';
     HeaderComponent,
     MenuComponent,
     ContentComponent,
-    MenuHintComponent
+    MenuHintComponent,
+    CreationComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [PersistenceService],
+  providers: [
+      PersistenceService,
+      StateService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

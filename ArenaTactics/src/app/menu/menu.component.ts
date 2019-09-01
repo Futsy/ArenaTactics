@@ -2,6 +2,8 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { PersistenceService } from '../core/persistence.server.service';
 import { Subscription } from 'rxjs';
 import { Team } from '../model/team';
+import { StateService } from '../core/state.server.service';
+import { State } from '../model/state';
 
 @Component({
     selector: 'app-menu',
@@ -9,19 +11,24 @@ import { Team } from '../model/team';
     styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent implements OnInit, OnDestroy {
-    subscription: Subscription;
+    persistenceSubscription: Subscription;
     teams: Team[] = [];
 
     constructor(
-        private persistenceServer: PersistenceService
+        private persistenceServer: PersistenceService,
+        private stateServer: StateService
     ) {}
 
     ngOnInit() {
-        this.subscription = this.persistenceServer.getPersistenceObject()
+        this.persistenceSubscription = this.persistenceServer.getPersistenceObject()
             .subscribe(teams => this.teams = teams);
     }
 
     ngOnDestroy() {
-        this.subscription.unsubscribe();
+        this.persistenceSubscription.unsubscribe();
+    }
+
+    createNewTeam() {
+        this.stateServer.updateState(State.Create);
     }
 }

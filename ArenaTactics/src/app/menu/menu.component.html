@@ -4,6 +4,6 @@
 <div *ngFor="let team of teams" class="menu-item" title="Click to see the tactics for this composition.">
     X
 </div>
-<div class="menu-item" title="Add a new team composition.">
+<div class="menu-item" title="Add a new team composition." (click)="createNewTeam()">
     <i class="fa fa-plus"></i> Add a team
 </div>
