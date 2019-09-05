@@ -7,9 +7,20 @@ import { Subject, Observable } from 'rxjs';
 })
 export class PersistenceService {
     private subject = new Subject<Team[]>();
+    private teams: Team[] = [];
+
+    insertNewTeam(team: Team) {
+        this.teams.push(team);
+        this.subject.next(this.teams);
+    }
+
+    getCurrentTeams(): Team[] {
+        return this.teams;
+    }
 
     updatePersistenceObject(teams: Team[]) {
-        this.subject.next(teams);
+        this.teams = teams;
+        this.subject.next(this.teams);
     }
 
     getPersistenceObject(): Observable<Team[]> {

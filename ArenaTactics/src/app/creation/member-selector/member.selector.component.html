@@ -1,0 +1,28 @@
+<div>
+    <div class="player-header">
+        Pick the specialization for the <u>{{ getPlayerNumberTextual() }}</u>
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <app-class-selector (selectedSpecEvent)="selectedCombination($event)" [className]="'Druid'" [classImage]="'../../../assets/druid.png'" [specs]="['Balance', 'Feral', 'Guardian', 'Restoration']"></app-class-selector>
+            <app-class-selector (selectedSpecEvent)="selectedCombination($event)" [className]="'Hunter'" [classImage]="'../../../assets/hunter.png'" [specs]="['Beast Mastery', 'Marksmanship', 'Survival']"></app-class-selector>
+            <app-class-selector (selectedSpecEvent)="selectedCombination($event)" [className]="'Mage'" [classImage]="'../../../assets/mage.png'" [specs]="['Arcane', 'Fire', 'Frost']"></app-class-selector>
+        </div>
+        <div class="column">
+            <app-class-selector (selectedSpecEvent)="selectedCombination($event)" [className]="'Death knight'" [classImage]="'../../../assets/death-knight.png'" [specs]="['Blood', 'Frost', 'Unholy']"></app-class-selector>
+            <app-class-selector (selectedSpecEvent)="selectedCombination($event)" [className]="'Demon hunter'" [classImage]="'../../../assets/demon-hunter.png'" [specs]="['Havoc', 'Vengeance']"></app-class-selector>
+            <app-class-selector (selectedSpecEvent)="selectedCombination($event)" [className]="'Monk'" [classImage]="'../../../assets/monk.png'" [specs]="['Brewmaster', 'Mistweaver', 'Windwalker']"></app-class-selector>
+        </div>
+        <div class="column">
+            <app-class-selector (selectedSpecEvent)="selectedCombination($event)" [className]="'Paladin'" [classImage]="'../../../assets/paladin.png'" [specs]="['Holy', 'Protection', 'Retribution']"></app-class-selector>
+            <app-class-selector (selectedSpecEvent)="selectedCombination($event)" [className]="'Priest'" [classImage]="'../../../assets/priest.png'" [specs]="['Discipline', 'Holy', 'Shadow']"></app-class-selector>
+            <app-class-selector (selectedSpecEvent)="selectedCombination($event)" [className]="'Rogue'" [classImage]="'../../../assets/rogue.png'" [specs]="['Assassination', 'Outlaw', 'Subtlety']"></app-class-selector>
+        </div>
+        <div class="column">
+            <app-class-selector (selectedSpecEvent)="selectedCombination($event)" [className]="'Shaman'" [classImage]="'../../../assets/shaman.png'" [specs]="['Elemental', 'Enhancement', 'Restoration']"></app-class-selector>
+            <app-class-selector (selectedSpecEvent)="selectedCombination($event)" [className]="'Warlock'" [classImage]="'../../../assets/warlock.png'" [specs]="['Affliction', 'Demonology', 'Destruction']"></app-class-selector>
+            <app-class-selector (selectedSpecEvent)="selectedCombination($event)" [className]="'Warrior'" [classImage]="'../../../assets/warrior.png'" [specs]="['Arms', 'Fury', 'Protection']"></app-class-selector>
+        </div>
+    </div>
+</div>

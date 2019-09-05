@@ -1,0 +1,8 @@
+
+<div class="header">
+    <span>{{ className }}</span>
+    <img [src]="classImage" alt="Picture showing the class icon of a {{ className }}.">
+</div>
+<div *ngFor="let spec of specs" class="spec-option" (click)="selectedSpec(spec)">
+    <i class="fa fa-arrow-right"></i> {{ spec }}
+</div>

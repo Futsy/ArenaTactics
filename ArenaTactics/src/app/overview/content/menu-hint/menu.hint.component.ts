@@ -5,6 +5,4 @@ import { Component } from '@angular/core';
     templateUrl: './menu.hint.component.html',
     styleUrls: ['./menu.hint.component.scss']
 })
-export class MenuHintComponent {
-
-}
+export class MenuHintComponent {}

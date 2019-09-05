@@ -1,6 +1,10 @@
-
-.creation-wrapper {
+:host {
     display    : flex;
     flex-flow  : row wrap;
     font-family: 'Lexend Deca', sans-serif;
+    background : #5a5a61;
+    width      : 100%;
+    height     : calc(100vh - 70px);
+    overflow   : auto;
+    min-height : 100px;
 }

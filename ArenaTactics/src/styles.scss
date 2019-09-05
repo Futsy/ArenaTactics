@@ -1,5 +1,9 @@
 $menu-background: rgb(37, 37, 38);
-$page-background: white;
+$page-background: #5a5a61;
+
+* {
+    box-sizing: border-box;
+}
 
 body {
     background: $page-background;

@@ -1,9 +1,9 @@
 <div class="menu-item" title="Import or export a file to save your tactics!">
     <i class="fa fa-download"></i> Import/Export
 </div>
-<div *ngFor="let team of teams" class="menu-item" title="Click to see the tactics for this composition.">
+<div *ngFor="let team of teams" class="menu-item" title="Click to see the tactics for this team.">
     X
 </div>
-<div class="menu-item" title="Add a new team composition." (click)="createNewTeam()">
+<div class="menu-item" title="Add a new team composition." [routerLink]="['create']">
     <i class="fa fa-plus"></i> Add a team
 </div>

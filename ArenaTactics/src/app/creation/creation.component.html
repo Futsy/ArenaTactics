@@ -1,4 +1,8 @@
-<div class="creation-wrapper">
-    <app-header></app-header>
-    Creation
-</div>
+<app-mode-selector [mode]="'2v2'" (selectedModeEvent)="modeSelected($event)" *ngIf="!hasSelectedFormat()"></app-mode-selector>
+<app-mode-selector [mode]="'3v3'" (selectedModeEvent)="modeSelected($event)" *ngIf="!hasSelectedFormat()"></app-mode-selector>
+
+<app-member-selector [playerNumber]="1" (selectedPlayerEvent)="addMemberToTeam($event)" *ngIf="hasSelectedFormat() && getMembersInTeam() === 0"></app-member-selector>
+<app-member-selector [playerNumber]="2" (selectedPlayerEvent)="addMemberToTeam($event)" *ngIf="hasSelectedFormat() && getMembersInTeam() === 1"></app-member-selector>
+<app-member-selector [playerNumber]="3" (selectedPlayerEvent)="addMemberToTeam($event)" *ngIf="hasSelectedFormat() && getMembersInTeam() === 2 && selected3v3"></app-member-selector>
+
+<app-creating-team *ngIf="getMembersInTeam() === 3 || (getMembersInTeam() === 2 && selected2v2)" [team]="team" (quitCreationEvent)="quitCreation()"></app-creating-team>

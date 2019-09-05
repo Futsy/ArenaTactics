@@ -1,0 +1,36 @@
+:host {
+    width: 100%;
+
+    .player-header {
+        text-align   : center;
+        color        : white;
+        font-size    : 2rem;
+        margin-top   : 30px;
+        margin-bottom: 20px;
+    }
+
+    .row {
+        display  : flex;
+        flex-wrap: wrap;
+
+        .column {
+            flex     : 25%;
+            max-width: 25%;
+            padding  : 5px;
+        }
+
+        @media (max-width: 800px) {
+            .column {
+                flex     : 50%;
+                max-width: 50%;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .column {
+                flex     : 100%;
+                max-width: 100%;
+            }
+        }
+    }
+}
