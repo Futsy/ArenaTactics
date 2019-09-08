@@ -5,5 +5,5 @@
     <h3>VS</h3>
     <app-selected-team-information [team]="matchup"></app-selected-team-information>
     <h2>Tactics</h2>
-    <textarea rows="20" [(ngModel)]="matchup.tactic"></textarea>
+    <textarea rows="20" [ngModel]="matchup.tactic" (ngModelChange)="setNewTactics($event)"></textarea>
 </div>

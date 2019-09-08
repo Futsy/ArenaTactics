@@ -13,7 +13,6 @@ export class OverviewComponent implements OnInit {
     }
 
     openImportExport(importExport: boolean) {
-        console.log(importExport);
         this.importExport = importExport;
     }
 }

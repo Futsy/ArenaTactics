@@ -66,6 +66,7 @@ export class TeamTacticsComponent implements OnInit, OnDestroy {
 
     changedAddingMatchup(addingMatchup: boolean) {
         this.addingMatchup = addingMatchup;
+        this.persistenceServer.persistObject();
     }
 
     pickedMatchup(matchup: Matchup) {
@@ -76,5 +77,6 @@ export class TeamTacticsComponent implements OnInit, OnDestroy {
     closeForm(showForm: boolean) {
         this.selectedMatchup = undefined;
         this.showForm = showForm;
+        this.persistenceServer.persistObject();
     }
 }
