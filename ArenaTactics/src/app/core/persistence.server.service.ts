@@ -45,7 +45,6 @@ export class PersistenceService {
     }
 
     persistObject() {
-        console.log('Persisting', this.teams);
         localStorage.setItem(this.storageKey, JSON.stringify(this.teams));
     }
 }
