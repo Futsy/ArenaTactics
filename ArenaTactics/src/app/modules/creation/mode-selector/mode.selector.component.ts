@@ -6,10 +6,10 @@ import { Component, Input, Output, EventEmitter, HostListener } from '@angular/c
     styleUrls: ['./mode.selector.component.scss']
 })
 export class ModeSelectorComponent {
-    @Input() mode: string;
     @Output() selectedModeEvent = new EventEmitter<string>();
+    @Input() mode: string;
 
-    @HostListener('click', ['$event'])
+    @HostListener('click', [])
     selectedMode() {
         this.selectedModeEvent.emit(this.mode);
     }
