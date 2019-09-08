@@ -1,0 +1,17 @@
+.team-information-wrapper {
+    margin: 10px;
+    border: 1px solid grey;
+    background: rgb(92, 92, 92);
+    line-height: 40px;
+
+    img {
+        width: 40px;
+        height: 40px;
+        float: left;
+    }
+
+    span {
+        padding-left: 10px;
+        color: white;
+    }
+}

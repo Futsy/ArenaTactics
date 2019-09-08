@@ -1,0 +1,9 @@
+<div *ngIf="showForm && team && matchup" class="tactic-form-wrapper">
+    <div id="back-button" (click)="goBack()"><i class="fa fa-arrow-left"></i> BACK</div>
+    <h2>Matchup</h2>
+    <app-selected-team-information [team]="team"></app-selected-team-information>
+    <h3>VS</h3>
+    <app-selected-team-information [team]="matchup"></app-selected-team-information>
+    <h2>Tactics</h2>
+    <textarea rows="20" [(ngModel)]="matchup.tactic"></textarea>
+</div>

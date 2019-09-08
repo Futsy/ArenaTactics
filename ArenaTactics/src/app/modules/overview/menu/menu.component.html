@@ -1,0 +1,9 @@
+<div class="menu-item" title="Import or export a file to save your tactics!" (click)="pickImportExport()">
+    <i class="fa fa-download"></i> Import/Export
+</div>
+<div *ngFor="let team of teams" class="menu-item" title="Click to see the tactics for this team." (click)="pickTeam(team)">
+    <app-member-icons [team]="team" [iconSize]="20"></app-member-icons>
+</div>
+<div class="menu-item" title="Add a new team composition." [routerLink]="['create']">
+    <i class="fa fa-plus"></i> Add a team
+</div>

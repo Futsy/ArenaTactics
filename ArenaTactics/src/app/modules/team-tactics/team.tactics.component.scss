@@ -1,0 +1,31 @@
+.team-tactics-wrapper {
+    padding: 10px;
+    color  : white;
+
+    .create-new-button {
+        height    : 40px;
+        background: rgb(92, 92, 92);
+        color     : #eee;
+        padding   : 10px;
+        margin    : 10px;
+        border    : 1px solid grey;
+        text-align: center;
+        cursor    : pointer;
+        transition: 0.3s;
+
+        &:hover {
+            background: rgb(72, 72, 72);
+            color     : white;
+        }
+    }
+
+    input {
+        width     : calc(100% - 20px);
+        height    : 40px;
+        background: rgb(92, 92, 92);
+        color     : #eee;
+        padding   : 10px;
+        margin    : 10px;
+        border    : 1px solid grey;
+    }
+}

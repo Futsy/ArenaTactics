@@ -1,0 +1,19 @@
+.tactic-form-wrapper {
+    padding: 10px;
+    color  : white;
+
+    #back-button {
+        margin-top   : 20px;
+        margin-bottom: 20px;
+        cursor       : pointer;
+    }
+
+    textarea {
+        width     : 100%;
+        border    : none;
+        background: rgba(30, 30, 30, 0.4);
+        color     : white;
+        padding   : 10px;
+        margin-top: 10px;
+    }
+}

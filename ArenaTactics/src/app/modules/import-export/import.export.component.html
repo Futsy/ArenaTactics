@@ -1,0 +1,7 @@
+<div class="import-export-wrapper">
+    <h2>Import/Export</h2>
+    <div>
+        The current active data is displayed below, save this text somewhere to save your information. Paste the saved text into the textarea at a later time to load the data. A red border around the textarea indicates the code that was pasted is incorrect and cannot be parsed.
+    </div>
+    <textarea rows="20" [ngModel]="importExportString" (ngModelChange)="onChange($event)" [ngStyle]="getValidationStyle()"></textarea>
+</div>

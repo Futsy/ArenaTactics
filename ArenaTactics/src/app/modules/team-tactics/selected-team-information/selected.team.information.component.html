@@ -1,0 +1,4 @@
+<div *ngFor="let member of team.members" class="team-information-wrapper">
+    <img [src]="getMemberIcon(member)" alt="Picture showing the class icon of a {{ getClassNameForMember(member) }}.">
+    <span>{{ getSpecNameForMember(member) }}</span>
+</div>

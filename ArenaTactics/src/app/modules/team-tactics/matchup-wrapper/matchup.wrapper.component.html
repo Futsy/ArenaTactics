@@ -1,0 +1,6 @@
+<div class="matchup-wrapper" *ngFor="let matchup of team.matchups" (click)="selectedMatchup(matchup)">
+    <div *ngFor="let member of matchup.members" class="member-wrapper">
+        <img [src]="getMemberIcon(member)" alt="Picture showing the class icon of a {{ getClassNameForMember(member) }}.">
+        <div>{{ getSpecNameForMember(member) }}</div>
+    </div>
+</div>

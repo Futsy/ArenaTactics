@@ -1,0 +1,16 @@
+<div class="team-tactics-wrapper" *ngIf="team && !addingMatchup && !showForm">
+    <h2>Current team</h2>
+    <app-selected-team-information [team]="team"></app-selected-team-information>
+
+    <h2>Matchups</h2>
+    <div class="create-new-button" (click)="createMatchup()">Add a new matchup</div>
+    <!--<input type="text" placeholder="Search for matchups (e.g. RMP)...">-->
+
+    <app-no-data-hint [team]="team"></app-no-data-hint>
+    <app-matchup-wrapper [team]="team" (selectedMatchupEvent)="pickedMatchup($event)"></app-matchup-wrapper>
+</div>
+
+<app-matchup-creator [team]="team" [addingMatchup]="addingMatchup" [matchup]="matchup" [showForm]="showForm"
+    (changedAddingMatchupEvent)="changedAddingMatchup($event)"></app-matchup-creator>
+
+<app-tactic-form [team]="team" [matchup]="selectedMatchup" [showForm]="showForm" (backEvent)="closeForm($event)"></app-tactic-form>

@@ -1,0 +1,5 @@
+<div>
+    <app-menu-hint *ngIf="!importExport && !team"></app-menu-hint>
+    <app-import-export *ngIf="importExport"></app-import-export>
+    <app-team-tactics *ngIf="!importExport && team"></app-team-tactics>
+</div>

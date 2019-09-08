@@ -1,0 +1,5 @@
+<div *ngIf="team && addingMatchup && !showForm">
+    <app-member-selector [playerNumber]="1" (selectedPlayerEvent)="addMemberToMatchup($event)" *ngIf="getMembersInMatchup() === 0"></app-member-selector>
+    <app-member-selector [playerNumber]="2" (selectedPlayerEvent)="addMemberToMatchup($event)" *ngIf="getMembersInMatchup() === 1"></app-member-selector>
+    <app-member-selector [playerNumber]="3" (selectedPlayerEvent)="addMemberToMatchup($event)" *ngIf="getMembersInMatchup() === 2 && team.members.length === 3"></app-member-selector>
+</div>
